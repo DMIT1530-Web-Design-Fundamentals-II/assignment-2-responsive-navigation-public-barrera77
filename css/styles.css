@@ -60,10 +60,21 @@ h1 {
 .nav-bar {
   width: 100%;
   display: none;
+
+  & .nav-bar li:hover,
+  a:hover {
+    color: var(--dk-green);
+  }
+}
+
+.dropdown li:hover,
+a:hover {
+  color: var(--dk-green);
 }
 
 .nav-bar.active {
   position: absolute;
+
   padding: 0 1rem;
   top: 4rem;
   left: 0;
@@ -71,7 +82,6 @@ h1 {
   flex-direction: column;
   align-items: flex-end;
   max-height: 100vh;
-
   overflow: hidden;
   transition: max-height 0.7s ease-in-out;
   background-color: var(--dk-grey1);
@@ -109,6 +119,7 @@ h1 {
 }
 
 .menu {
+  position: relative;
   padding: 0;
   margin: 0;
   display: flex;
@@ -149,7 +160,7 @@ h1 {
   flex-wrap: wrap;
   padding: 1rem;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 2rem 2rem 0 2rem;
   max-width: 100%;
   font-family: "Merriweather Sans", sans-serif;
 
@@ -171,6 +182,7 @@ h1 {
 .footer-container li:hover,
 h4:hover {
   color: var(--dk-green);
+  cursor: pointer;
 }
 
 .social-media-container ul {
@@ -185,6 +197,7 @@ h4:hover {
 
   & svg:hover {
     fill: var(--dk-green);
+    cursor: pointer;
   }
 }
 
@@ -197,14 +210,15 @@ h4:hover {
 @media only screen and (min-width: 600px) {
   .nav-bar {
     display: block;
-    width: 60%;
+    width: 70%;
   }
 
   .flex-container {
     width: 30%;
   }
 
-  .toggle-btn {
+  .toggle-btn,
+  .dropdown {
     display: none;
   }
 
@@ -215,10 +229,40 @@ h4:hover {
     justify-content: space-between;
     padding: 0 1rem;
   }
+
+  .dropdown {
+    position: absolute;
+  }
+
+  .menu-link:hover > .dropdown {
+  }
+
+  .dropdown.active {
+    position: absolute;
+    padding: 0 0.5rem 0.5rem;
+    top: calc(100% + 1rem);
+
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow: hidden;
+    transition: max-height 0.7s ease-in-out;
+    transition-delay: 1s, 1s, 0.3s;
+    background-color: var(--dk-grey1);
+
+    & li {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
 
 /* Medium view */
 @media screen and (min-width: 820px) {
+  .nav-bar {
+    display: block;
+    width: 40%;
+  }
   .footer-container {
     max-width: 75%;
     justify-content: space-between;
