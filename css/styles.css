@@ -1,7 +1,7 @@
 @font-face {
   font-family: "CooperHewittHeavy";
   src: url("../fonts/cooperhewitt-heavy.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
 }
 
@@ -26,6 +26,10 @@ header {
   position: relative;
 }
 
+html {
+  width: 100vw;
+}
+
 section {
   font-family: "Merriweather Sans", sans-serif;
 }
@@ -33,18 +37,6 @@ section {
 h1 {
   font-family: "CooperHewittHeavy", sans-serif;
 }
-
-/* header nav {
-  position: absolute;
-  top: 4.125rem;
-  left: 0;
-
-  background-color: #003049;
-  width: 100vw;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.7s ease-in-out;
-} */
 
 .header-container {
   display: flex;
@@ -213,8 +205,154 @@ h4:hover {
 .content-container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   gap: 2rem;
+}
+
+.content-container h2 {
+  font-family: "CooperHewittHeavy", "Cooper Hewitt Heavy", sans-serif;
+  font-size: 90px;
+}
+
+.content-container h3 {
+  font-family: "CooperHewittHeavy", "Cooper Hewitt Heavy", sans-serif;
+  font-size: 42px;
+  color: var(--golden);
+}
+
+.section-one,
+.section-two {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+.content-container p {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.section-one h2 {
+  color: var(--dk-grey2);
+  display: flex;
+  flex-direction: column;
+}
+
+.section-one span {
+  color: var(--dk-grey3);
+  line-height: 50px;
+  padding-left: 3rem;
+}
+.btn-discover {
+  border-radius: 30px;
+  background-color: var(--dk-grey2);
+  color: var(--white1);
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  border: none;
+  width: 10rem;
+}
+
+.btn-discover-blog {
+  border-radius: 30px;
+  background-color: var(--white1);
+  color: var(--dk-grey3);
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  border: none;
+  width: 12.5rem;
+}
+
+.section-one-content {
+  padding-top: 1rem;
+}
+
+.img-breakfast img {
+  width: 90%;
+  align-self: flex-end;
+}
+
+.img-platter {
+  position: relative;
+  height: 11vh;
+}
+
+.img-platter img {
+  position: relative;
+  width: 65%;
+  top: -4rem;
+}
+
+/* Section three */
+.section-three {
+  text-align: center;
+}
+
+.section-three h2 {
+  position: relative;
+}
+
+.img-heart {
+  width: 50px;
+  position: relative;
+  top: -9rem;
+  left: 40px;
+}
+
+.img-heart svg {
+  fill: var(--dk-orange);
+}
+
+/* Section 2 */
+
+.section-two {
+  background-color: var(--light-grey2);
+  padding-bottom: 2rem;
+}
+
+.section-two-header {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.section-two-header button {
+  align-self: flex-end;
+}
+
+.section-two h2 {
+  color: var(--dk-green);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.section-two span {
+  color: var(--dk-grey3);
+  line-height: 50px;
+  text-align: end;
+}
+
+.img-water {
+  align-items: flex-end;
+}
+.img-water img {
+  width: 75%;
+}
+
+/* Section Three */
+
+.section-three {
+  text-align: start;
+  text-align: center;
 }
 
 /* mobile view */
@@ -245,14 +383,10 @@ h4:hover {
     position: absolute;
   }
 
-  .menu-link:hover > .dropdown {
-  }
-
   .dropdown.active {
     position: absolute;
-    padding: 0 0.5rem 0.5rem;
-    top: calc(100% + 1rem);
-
+    padding: 0 0.5rem 1rem 0.5rem;
+    top: calc(100% + 0.75rem);
     display: flex;
     flex-direction: column;
     max-height: 100vh;
@@ -266,32 +400,89 @@ h4:hover {
       justify-content: center;
     }
   }
-}
+  .section-one,
+  .section-two {
+    flex-direction: row;
+  }
 
-.btn-discover {
-  border-radius: 30px;
-  background-color: var(--dk-grey2);
-  color: var(--white1);
-  font-weight: 600;
-  padding: 0.5rem 2rem;
-  border: none;
-}
+  .section-one-header {
+    width: 40%;
+    padding-left: 2rem;
+    padding-top: 1rem;
+  }
 
-.btn-discover-blog {
-  border-radius: 30px;
-  background-color: var(--white1);
-  color: var(--dk-grey3);
-  font-weight: 600;
-  padding: 0.5rem 2rem;
-  border: none;
+  .section-one-header p {
+    font-size: 11.5px;
+  }
+
+  .section-one-header h2,
+  .section-two-header h2 {
+    font-size: 70px;
+  }
+
+  .section-two-header {
+    padding-top: 3rem;
+    padding-left: 2rem;
+  }
+
+  .section-two-header span,
+  button {
+    padding-left: 2rem;
+  }
+
+  .section-one-content {
+    width: 65%;
+  }
+
+  .img-water {
+    position: relative;
+  }
+
+  .img-water img {
+    position: relative;
+    top: 3rem;
+  }
+
+  /* Section three */
+
+  .img-heart {
+  }
 }
 
 /* Medium view */
 @media screen and (min-width: 820px) {
   .nav-bar {
     display: block;
-    width: 40%;
+    width: 55%;
   }
+
+  .section-one {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .section-one-header h2,
+  .section-two-header h2 {
+    font-size: 90px;
+  }
+
+  .section-one-header p {
+    font-size: 16px;
+  }
+
+  .section-one-content {
+    width: 60%;
+  }
+
+  .img-platter {
+    height: 13vh;
+  }
+
+  .img-water img {
+    width: 60%;
+  }
+
+  /* Footer */
   .footer-container {
     max-width: 75%;
     justify-content: space-between;
@@ -304,4 +495,81 @@ h4:hover {
 
 /* Large view */
 @media screen and (min-width: 1350px) {
+  .content-container {
+    gap: 15rem;
+  }
+  .nav-bar {
+    width: 55%;
+    padding-right: 1rem;
+  }
+
+  .menu-link {
+    font-size: 24px;
+  }
+
+  .menu-link a {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    white-space: nowrap;
+  }
+
+  .section-one {
+    width: 100%;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    justify-content: center;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .section-one-header {
+    padding-top: 10rem;
+    max-width: 30%;
+  }
+  .section-one-header p {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  .section-one-content {
+    max-width: 40%;
+  }
+
+  .img-platter {
+    height: 20 vh;
+  }
+
+  .section-two {
+    justify-content: space-between;
+    height: 35vh;
+  }
+
+  .section-two-header h2 {
+    font-size: 125px;
+  }
+
+  .section-two-header span {
+    font-size: 90px;
+    line-height: normal;
+    margin-top: -4rem;
+  }
+
+  .section-two-header span,
+  button {
+    padding-left: 16rem;
+  }
+
+  .section-two-header button {
+    margin-top: -3rem;
+  }
+
+  .section-two-content {
+    width: 60%;
+  }
+
+  .img-water img {
+    top: -5rem;
+    right: 40%;
+    max-width: 50%;
+  }
 }
