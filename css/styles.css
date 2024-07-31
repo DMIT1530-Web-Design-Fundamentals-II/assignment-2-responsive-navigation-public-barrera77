@@ -26,6 +26,10 @@ header {
   position: relative;
 }
 
+section {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
 h1 {
   font-family: "CooperHewittHeavy", sans-serif;
 }
@@ -206,6 +210,13 @@ h4:hover {
   flex: 1 1 calc(50% - 1rem);
 }
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+}
+
 /* mobile view */
 @media only screen and (min-width: 600px) {
   .nav-bar {
@@ -255,6 +266,24 @@ h4:hover {
       justify-content: center;
     }
   }
+}
+
+.btn-discover {
+  border-radius: 30px;
+  background-color: var(--dk-grey2);
+  color: var(--white1);
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  border: none;
+}
+
+.btn-discover-blog {
+  border-radius: 30px;
+  background-color: var(--white1);
+  color: var(--dk-grey3);
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  border: none;
 }
 
 /* Medium view */
