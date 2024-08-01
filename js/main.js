@@ -10,6 +10,13 @@ function displayMainMenu() {
   toggleMenu.addEventListener("click", (e) => {
     e.preventDefault();
     mainMenu.classList.toggle("active");
+
+    // Hide all dropdowns when clicking the toggle button in mobile view
+    if (!mainMenu.classList.contains("active")) {
+      dropDownMenus.forEach((dropdown) => {
+        dropdown.classList.remove("active");
+      });
+    }
   });
 }
 

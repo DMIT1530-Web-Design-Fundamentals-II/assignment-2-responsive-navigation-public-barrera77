@@ -92,12 +92,18 @@ a:hover {
   & .dropdown {
     justify-items: end;
     padding-left: 0;
+    display: none;
   }
 
   & svg {
     display: none;
   }
+
+  & .dropdown.active {
+    display: block;
+  }
 }
+
 .toggle-btn {
   background-color: transparent;
   border: none;
@@ -150,6 +156,11 @@ a:hover {
   font-family: "Merriweather Sans", sans-serif;
   font-weight: normal;
 }
+
+/* .menu-link:hover > .dropdown {
+  display: block;
+}
+ */
 
 .footer-container {
   display: flex;
@@ -623,7 +634,7 @@ h4:hover {
   /* Section five */
   .section-five-header h3 {
     font-size: 90px;
-    height: 13vh;
+    height: 17vh;
   }
 
   .section-five-description {
@@ -770,6 +781,6 @@ h4:hover {
   }
 
   .section-five-img img {
-    width: 45%;
+    max-width: 45%;
   }
 }
